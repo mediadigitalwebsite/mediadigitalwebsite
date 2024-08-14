@@ -1,0 +1,497 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #0000002a;
+    /* Add other styles as needed */
+    color: rgba(234, 231, 231, 0.847);
+    position:absolute;
+    width:100%
+}
+.navbar-nav .nav-link {
+    color: rgba(234, 231, 231, 0.847);
+}
+#navbarSupportedContent a{
+    color: rgb(255, 255, 255);
+}
+.navbar-nav .nav-link:active{
+    background-color: #092e2023;
+    color:#fff
+}
+#navbarSupportedContent a:hover{
+    background-color: #092e2023;
+    color:#ffffff67
+}
+
+.custom-navbar-brand img {
+    height: 50px;
+    width: auto;
+}
+
+/* Hero styles */
+.hero {
+    /* Set sizing */
+    width: 100vw;
+    height: 100vh;
+    /* Center content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.071), rgba(255, 255, 255, 0.126)), url("../../images/hero-bg.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* margin-bottom:60px; */
+}
+
+.button-group {    
+    display: flex;
+    justify-content: center; /* Centers buttons horizontally */
+    gap: 50px; /* Adds space between the buttons */
+    margin-top: 20px; /* Optional: adds space above the button group */
+}
+
+@media(max-width:768px){
+    .hero{
+    height:100%;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center; 
+    background-repeat: no-repeat;
+    }
+}
+
+.hero-content{
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#ffffff;
+    font-family:  Tahoma, sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+/* Section styles */
+section {
+    padding: 40px 0;
+    /* text-align: center; */
+    background-color: #ffffff;
+    /* Add other styles as needed */
+}
+section::before {
+    content: "";
+    display: block;
+    height: 60px; /* Height of the sticky nav */
+    margin-top: -60px; /* Negative margin to pull the section up */
+    visibility: hidden; /* Hide the placeholder */
+}
+/* Customize individual sections */
+#beranda {
+    height: 100vh;
+
+
+    /* Add specific styles for Beranda section */
+}
+
+#tentang-kami {
+
+    /* height: 100vh; */
+    /* background-image: url("../../images/bg-gallery.svg"); */
+    background-color: rgba(89, 69, 199, 0.096) ;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+
+    padding-top:10px;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+#tentang-kami .text-container p {
+    text-align: justify;
+    padding-bottom: 50px;
+    height:80%;
+    margin-top:50px;
+    margin-bottom:50px;
+    word-wrap: break-word; /* Ensures long words break and wrap to the next line */
+    overflow-wrap: break-word; 
+}
+
+ /* styles.css */
+ #tentang-kami .text-container {
+    /* position: relative; */
+    overflow: hidden; /* Hide overflow for smoother animations */
+    /* height: 100vh; To create scrolling effect */
+    margin-bottom:50px;
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+
+/* Add class for animation effect */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(100vh);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+#tentang-kami .under{
+    display: inline-block;
+    border-bottom: 3px solid rgb(40, 34, 34); /* Adjust thickness and color */
+    /* Adjust space between text and underline */
+    width:200px;
+    margin-bottom:10px;
+    margin-top:5px;
+}
+#tentang-kami .animated-text {
+    opacity: 0; /* Start as invisible */
+    transform: translateY(20px); /* Initial position */
+    filter: blur(5px); /* Shading effect */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+#tentang-kami .animated-text.show {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to its original position */
+    filter: blur(0); /* Remove blur */
+    animation: fadeIn 1s forwards;
+}
+
+#kontak {
+background-color: #f9f9f9; padding: 20px;    /* Add specific styles for Kontak section */
+text-align: center;
+}
+
+#kontak h3{
+text-align: center;
+}
+
+#kontak .centerize{
+    
+    /* position: relative; */
+    overflow: hidden; /* Hide overflow for smoother animations */
+    /* height: 100vh; To create scrolling effect */
+    margin-bottom:50px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#kontak body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+#kontak .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+#kontak   h2 {
+            text-align: center;
+            color: #333;
+        }
+#kontak .form-group {
+            margin-bottom: 15px;
+        }
+#kontak  .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+#kontak   .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+#kontak .form-group textarea {
+            resize: vertical;
+        }
+#kontak .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+#kontak .form-group button:hover {
+            background-color: #218838;
+        }
+#kontak .under{
+    display: inline-block;
+    border-bottom: 3px solid rgb(40, 34, 34); /* Adjust thickness and color */
+    /* Adjust space between text and underline */
+    width:200px;
+    margin-bottom:10px;
+    margin-top:5px;
+    text-align: center;
+    align-items: center;
+}
+
+
+#klien {
+    /* Add specific styles for Klien section */
+    text-align: center;
+}
+
+#klien .under{
+    display: inline-block;
+    border-bottom: 3px solid rgb(0, 0, 0); /* Adjust thickness and color */
+    /* Adjust space between text and underline */
+    width:200px;
+    margin-bottom:10px;
+    margin-top:5px;
+}
+
+
+
+#klien .content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+}
+
+/* Apply the animation to the element */
+
+@keyframes fadeInou {
+    from {
+      opacity: 0;
+      transform: translateX(-100vh);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+#klien .fade-in-right {
+    opacity: 0; /* Start as invisible */
+    transform: translateY(20px); /* Initial position */
+    filter: blur(5px); /* Shading effect */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+#klien .fade-in-right.show {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to its original position */
+    filter: blur(0); /* Remove blur */
+    animation: fadeInou 1s forwards;
+}
+
+
+#klien .clients {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#klien .client {
+    text-align: center;
+    max-width: 150px;
+}
+
+#klien .client img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+
+#gallery {
+    /* height: 100vh; */
+    background-image: url("../../images/bg-gallery.svg");
+    background-size: cover;
+    background-position: center center;
+    /* padding: 20px; */
+    color: #ffffff;
+    height:100vh;
+}
+#gallery .title-gal{
+        display:flex; 
+        text-align:center;
+        align-items: flex-start;
+
+}
+
+@media(max-width:768px){
+    #gallery .img-control{
+        background-image: url('../../images/g18.svg'); 
+
+        background-color: rgba(255, 255, 255, 0.200);
+        background-size: 100% 100% !important;
+        background-repeat: no-repeat;
+        background-position: right top !important;    
+    }
+
+    #gallery .row.stretch-column {
+        /* display: flex; */
+        /* height: 100%; */
+        padding-right:0px !important;
+        padding-bottom:20px !important;
+        /* margin-top:50px; */
+    }
+    
+    #gallery .bg-gal {
+        display: flex;
+        flex-direction: column;
+        height:100vh !important;
+        /* margin-left:150px; */     
+        /* background-image: url("../../images/bg-gallery.svg"); */ 
+    }
+    #gallery {
+        height:130vh;
+    }
+}
+
+
+#gallery .bg-gal {
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    
+    /* background-image: url("../../images/bg-gallery.svg"); */ 
+}
+
+#gallery .container {
+    flex: 1;
+    padding-bottom: 0px;
+
+}
+
+#gallery .row.stretch-column {
+    /* display: flex; */
+    height: 100%;
+    padding-right:0px;
+    padding-bottom:20px;
+}
+
+#gallery .circle {
+    display: inline-block;
+    /* width: 1px;
+    height: 1px; */
+    font-size: 0px;
+    border-radius: 50%;
+    margin-right: 0px;
+    animation: grow 2s infinite alternate;
+    animation-fill-mode: forwards;
+}
+
+#gallery .grow {
+    animation-name: grow;
+}
+@keyframes grow {
+
+    from {
+        font-size: 0px;
+        width: 0px;
+        height: 0px;
+    }
+    to {
+        font-size: 16px;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+@keyframes shrink {
+    /* 0%,100%{
+        transform: scale(1); /* Initial and final size */
+        /* background-size: 0% 0%;
+    }  */
+    from {
+        background-size: 100% 100%;
+        /* padding-bottom: 100px; */
+        margin-bottom:100px;
+    }
+    90% {
+        background-size: 10% 10%;
+    }
+    100%{        
+        background-size: 0% 0%;
+    }
+}
+
+#gallery .python {
+    background-color: #306998; /* Python blue */
+}
+
+#gallery .cms {
+    background-color: #ffcc00; /* CMS yellow */
+}
+
+#gallery .django {
+    background-color: #092e20; /* Django green */
+}
+
+
+#gallery .img-control{
+    display: inline-block;
+    background-image: url('../../images/g18.svg'); /*Replace with your image URL*/
+    background-color: rgba(255, 255, 255, 0.200);
+    background-size:contain ; /* Adjust as needed */
+    background-repeat: no-repeat;
+    background-position: right center;
+    animation: shrink 2s infinite alternate;
+    animation-fill-mode: forwards   ;
+}
+#gallery .shrink{
+    animation-name:shrink;
+}
+
+#gallery .under{
+    display: inline-block;
+    border-bottom: 3px solid rgb(255, 255, 255); /* Adjust thickness and color */
+    /* Adjust space between text and underline */
+    width:200px;
+    margin-bottom:10px;
+    margin-top:5px;
+}
+
+#gallery .col2bg {
+    /*border: 5px solid white; /* White border */
+    padding: 0px; /* Optional: Adjust padding as needed */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    /* Set the background color with transparency */
+        /*background-color: rgba(0, 0, 0, 0.1s52); 50% /*transparent black background */
+    
+    /* Set the opacity of the entire element */
+    opacity: 1; /* 80% opaque */
+    object-fit: cover;
+  
+    /* Add a shadow */
+    box-shadow: 0px 0px 100px 100px rgba(255, 255, 255, 0.200); /* shadow with 30% opacity */
+    /* border circle */
+    border-radius: 50% 0% 0% 0%;
+    border:none;
+}
+
